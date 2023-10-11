@@ -27,6 +27,8 @@ let g:mapleader=','
 set listchars=tab:>·,extends:>,precedes:<
 set list
 set guifont=Jet\ Brains\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+set wildmenu
+set wildmode=longest:full,full
 
 " autocmd FileType c,cpp,h, set noexpandtab
 
@@ -50,6 +52,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'ryanoasis/vim-devicons'
+  Plug 'ap/vim-css-color'
 
   " Plug 'jiangmiao/auto-pairs'
   " Plug 'rhysd/vim-healthcheck'
@@ -112,6 +115,8 @@ let g:coc_global_extensions = [
       \'coc-jedi',
       \'coc-diagnostic',
       \'coc-sh',
+      \'coc-cmake',
+      \'coc-markdownlint',
       \'coc-json',
       \'coc-clang-format-style-options',
       \]
