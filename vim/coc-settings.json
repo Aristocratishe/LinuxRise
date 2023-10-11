@@ -1,0 +1,125 @@
+{
+  "suggest.autoTrigger": "none",
+  "suggest.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "highlight": "on",
+    // "borderhiglight": true,
+    // "maxHeight": 15
+  },
+//  "[cpp][c]": {
+//    "inlayHint": {
+//      "Designators": false,
+//      "Enabled": false,
+//      "ParameterNames": false,
+//      "DeducedTypes": false
+//    }
+//  },
+  "semanticTokens.enable": true,
+  "jedi.enable": true,
+  "jedi.startupMessage": false,
+  "jedi.markupKindPreferred": "plaintext",
+  "jedi.trace.server": "off",
+  "jedi.jediSettings.autoImportModules": [],
+  "jedi.jediSettings.caseInsensitiveCompletion": true,
+  "jedi.jediSettings.debug": false,
+  "jedi.executable.command": "/home/andrew/.local/bin/jedi-language-server",
+  "jedi.executable.args": [],
+  "jedi.codeAction.nameExtractFunction": "jls_extract_def",
+  "jedi.codeAction.nameExtractVariable": "jls_extract_var",
+  "jedi.completion.disableSnippets": true,
+  "jedi.completion.resolveEagerly": false,
+  "jedi.completion.ignorePatterns": [],
+  "jedi.diagnostics.enable": true,
+  "jedi.diagnostics.didOpen": true,
+  "jedi.diagnostics.didChange": true,
+  "jedi.diagnostics.didSave": true,
+  "jedi.hover.enable": true,
+  "jedi.hover.disable.keyword.all": false,
+  "jedi.hover.disable.keyword.names": [],
+  "jedi.hover.disable.keyword.fullNames": [],
+  "jedi.workspace.extraPaths": [],
+  "jedi.workspace.symbols.maxSymbols": 20,
+  "jedi.workspace.symbols.ignoreFolders": [
+    ".nox",
+    ".tox",
+    ".venv",
+    "__pycache__",
+    "venv"
+  ],
+  "diagnostic-languageserver.filetypes": {
+    "python": "flake8"
+  },
+  "diagnostic-languageserver.linters": {
+    "flake8": {
+      "sourceName": "flake8",
+      "command": "flake8",
+      "debounce": 200,
+      "rootPatterns": [".git", "pyproject.toml", "setup.py"],
+      "args": [
+        "--format=%(row)d,%(col)d,%(code).1s,%(code)s: %(text)s",
+        "-"
+      ],
+      "offsetLine": 0,
+      "offsetColumn": 0,
+      "formatLines": 1,
+      "formatPattern": [
+        "(\\d+),(\\d+),([A-Z]),(.*)(\\r|\\n)*$",
+        {
+          "line": 1,
+          "column": 2,
+          "security": 3,
+          "message": 4
+        }
+      ],
+      "securities": {
+        "W": "info",
+        "E": "warning",
+        "F": "info",
+        "C": "info",
+        "N": "hint"
+      }
+    }
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+      "python": ["black", "isort", "docformatter"]
+  },
+  "diagnostic-languageserver.formatters": {
+    "black": {
+      "command": "black",
+      "args": ["-q", "-"]
+    },
+    "isort": {
+      "command": "isort",
+      "args": ["-q", "-"]
+    },
+    "docformatter": {
+      "command": "docformatter",
+      "args": ["-"]
+    }
+  },
+  "clangd.enabled": true,
+//   "clangd.arguments": [
+//         "--compile-commands-dir=build",
+//         "--compile_args_from=filesystem",
+//         "--all-scopes-completion",
+//         "--background-index",
+//         "--clang-tidy",
+//         "--cross-file-rename",
+//         "--completion-parse=always",
+//         "--completion-style=detailed",
+//         "--function-arg-placeholders",
+//         "--header-insertion-decorators",
+//         "--header-insertion=never",
+//         "--limit-results=0",
+//         "-j=6",
+//         "--pch-storage=memory"
+//   ],
+  "clangd.checkUpdates": true,
+  "clangd.disableDiagnostics": false,
+  "clangd.disableSnippetCompletion": false,
+  "clangd.disableProgressNotifications": false,
+  "clangd.compilationDatabaseCandidates": [],
+  "clangd.fallbackFlags": [],
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd"
+}
