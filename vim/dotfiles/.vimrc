@@ -53,6 +53,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'ryanoasis/vim-devicons'
   Plug 'ap/vim-css-color'
+  Plug 'fedorenchik/qt-support.vim'
 
   " Plug 'jiangmiao/auto-pairs'
   " Plug 'rhysd/vim-healthcheck'
